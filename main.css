@@ -1,16 +1,15 @@
 @font-face {
-    src: url("./fonts/FormaDJRVariableNormal[opsz\,slnt\,wght]-Edu.woff2") format("woff2"),
-         url('./fonts/FormaDJRVariableNormal[opsz\,slnt\,wght]-Edu.woff') format("woff"),
-        url('./fonts/FormaDJRVariableNormal[opsz\,slnt\,wght]-Edu.ttf') format('truetype');
+    src: url("fonts/IndoorKidVariable[EMPH\,slnt\,wdth\,wght].woff2") format("woff2"),
+         url("fonts/IndoorKidVariable[EMPH\,slnt\,wdth\,wght].woff") format("woff");
 
-    font-family: 'Forma';
+    font-family: 'Indoor Kid';
     font-style: normal;
     font-weight: normal;
     }
     
     body{
     background-color: lightsteelblue;
-    font-family: 'Forma';
+    font-family: 'Indoor Kid', sans-serif;
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
@@ -32,6 +31,7 @@ grid-template-areas:
 
 .history {
 grid-area: h;
+background-color: lightcoral;
 }
 
 .variations{
@@ -53,6 +53,10 @@ h3{
     text-align: center;
     font-size: 5em;
     animation: weightChange 7s infinite;
+}
+
+p{
+    margin: 10px;
 }
 
 @keyframes weightChange {
