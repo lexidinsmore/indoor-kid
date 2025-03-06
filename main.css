@@ -8,16 +8,20 @@
     }
     
     body{
-    background-color: lightsteelblue;
+    background-color: rgba(16, 182, 129, 0.898);
     font-family: 'Indoor Kid', sans-serif;
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
-    width: min(100% - 3rem, 80ch);
+    width: min(100% - 3rem, 200ch);
     margin-inline: auto;
 }
 /* how the page wrapper appears on desktop */
-
+.hero{
+    background-image: url("assets/hero.png");
+    height:400px;
+    background-size: cover;
+}
 @media only screen and (min-width:800px){
 .page-wrapper{
 display: grid;
@@ -29,34 +33,42 @@ grid-template-areas:
     "a a";
 }
 
-.history {
+#history {
 grid-area: h;
-background-color: lightcoral;
+background-color: rgb(91, 185, 248);
 }
 
-.variations{
+#variations{
 grid-area: v;
+background-color: rgb(232, 19, 19);
 }
 
-.alphabet {
+#alphabet {
 grid-area: a;
+background-color: rgb(255, 242, 0);
 }
 }
 /* CSS for the footer */
 footer{
-    background-color: gray;
+    background-color: hsl(55, 100%, 49%);
+}
+
+#download {
+    background-color: rgb(253, 175, 30);
 }
 
 /* variable font animation */
 h3{
     font-weight:20; 
     text-align: center;
+    padding-top: 200px;
     font-size: 5em;
     animation: weightChange 7s infinite;
 }
 
-p{
-    margin: 10px;
+.opensans{
+    font-family: "Open Sans", sans-serif;
+    margin: 2px;
 }
 
 @keyframes weightChange {
