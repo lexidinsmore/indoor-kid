@@ -8,20 +8,25 @@
     }
     
     body{
-    background-color: rgba(16, 182, 129, 0.898);
+    background-color:  #cd2727;
     font-family: 'Indoor Kid', sans-serif;
 }
+
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
-    width: min(100% - 3rem, 200ch);
+    width: min(100% - 0rem, 200ch);
     margin-inline: auto;
 }
 /* how the page wrapper appears on desktop */
-.hero{
-    background-image: url("assets/hero.png");
-    height:400px;
-    background-size: cover;
+.hero {
+    background-image: url("assets/background.png");
+    height: 400px; /* Adjust height as needed */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Ensures the section spans the full width */
 }
+
 @media only screen and (min-width:800px){
 .page-wrapper{
 display: grid;
@@ -30,22 +35,23 @@ grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
     "h v"
-    "a a";
+    "a a"
+    "d d";
 }
 
 #history {
 grid-area: h;
-background-color: rgb(91, 185, 248);
+background-color: #5099e2;
 }
 
 #variations{
 grid-area: v;
-background-color: rgb(232, 19, 19);
+background-color: #cd2727;
 }
 
 #alphabet {
 grid-area: a;
-background-color: rgb(255, 242, 0);
+background-color: #f1ea69;
 }
 }
 /* CSS for the footer */
@@ -54,7 +60,8 @@ footer{
 }
 
 #download {
-    background-color: rgb(253, 175, 30);
+    grid-area: d;
+    background-color: rgb(6, 79, 66);
 }
 
 /* variable font animation */
@@ -67,7 +74,7 @@ h3{
 }
 
 .opensans{
-    font-family: "Open Sans", sans-serif;
+    font-family: "Balsamiq Sans", sans-serif;
     margin: 2px;
 }
 
