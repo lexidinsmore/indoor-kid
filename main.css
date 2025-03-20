@@ -27,10 +27,10 @@
     width: 100%; /* Ensures the section spans the full width */
 }
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width:800px){}
 .page-wrapper{
 display: grid;
-grid-gap: 25px;
+grid-gap: 0px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
@@ -41,19 +41,26 @@ grid-template-areas:
 
 #history {
 grid-area: h;
-background-color: #5099e2;
-}
+background-color: #20A1C1;
+text-align: center;}
 
 #variations{
 grid-area: v;
-background-color: #cd2727;
+    background-color:  #f4ef6f;
 }
 
 #alphabet {
-grid-area: a;
-background-color: #f1ea69;
+    grid-area: a;
+    background-color: #cd2727; /* Keeps the background red */
 }
+
+#alphabet img {
+    max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; /* Centers the image horizontally */
 }
+
 /* CSS for the footer */
 footer{
     background-color: hsl(55, 100%, 49%);
@@ -61,7 +68,18 @@ footer{
 
 #download {
     grid-area: d;
-    background-color: rgb(6, 79, 66);
+    background-color: #064f42;
+    color: #f4ef6f; /* Makes all text inside #alphabet yellow */
+
+}
+#download a {
+    color: #33bbff; /* Replace #ff5733 with your desired color */
+    text-decoration: none; /* Removes the underline (optional) */
+}
+
+#download a:hover {
+    color: #d54700; /* Change color on hover (optional) */
+    text-decoration: underline; /* Add underline on hover (optional) */
 }
 
 /* variable font animation */
@@ -84,8 +102,54 @@ h3{
     }
     50%{font-variation-settings: "opsz" 72, "wght" 900, "slnt" -13;
     }
+     }
+     /* animations for the variable section */
+
+     .weight{
+        animation: variationWeightchange 5s infinite;
+    }
+    @keyframes variationWeightchange {
+        0%, 100%{
+            font-variation-settings: "opsz" 20, "wght" 1, "slnt" 0;
+        }
+        50%{font-variation-settings: "opsz" 20, "wght" 900, "slnt" 0;
+        }
+         }
+
+    .slant{
+       animation: slantChange 5s infinite;
+    }
+    @keyframes slantChange {
+        0%, 100%{
+            font-variation-settings: "opsz" 20, "wght" 50, "slnt" 0;
+        }
+        50%{font-variation-settings: "opsz" 20, "wght" 50, "slnt" -100;
+        }
+         }
+
+    .emphasis{
+        animation: emphasisChange 5s infinite;
+    }
+    @keyframes emphasisChange {
+        0%, 100%{
+            font-variation-settings: "EMPH" 100, "wght" 30, "slnt" 0;
+        }
+        50%{font-variation-settings: "EMPH" 120, "wght" 30, "slnt" 0;
+        }
+         }
+
+    .width{
+        animation: widthChange 5s infinite;
+    }
+    @keyframes widthChange {
+        0%, 100%{
+            font-variation-settings: "opsz" 8, "wght" 30, "slnt" 0, "wdth" 70;
+        }
+        50%{font-variation-settings: "opsz" 72, "wght" 30, "slnt" 0, "wdth" 130;
+        }
+         }
     
-}
+
 /* variable font that changes on hover */
 .variable-font{
     font-weight:1 ;
@@ -94,7 +158,6 @@ h3{
     display:grid;
     place-content: center;
     margin: 0;
-    text-align: center;
     font-variation-settings: "wght" 40, "wdth" 0, "XXXX" 1;
     transition: 
         font-weight 500ms,
@@ -110,5 +173,17 @@ h3{
     margin: 0;
     text-align: center;
     font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
+}
+
+h1 {
+    text-align: center; /* Centers the text horizontally */
+}
+
+h4{
+    text-align: center;
+}
+
+p{
+    text-align: center;
 }
 
