@@ -42,11 +42,34 @@ grid-template-areas:
 #history {
 grid-area: h;
 background-color: #20A1C1;
-text-align: center;}
+text-align:left
+}
+
+#history h1 {
+    font-size: 2.5rem; /* Adjust the size for the heading */
+}
+
+#history p {
+    font-size: 1.2rem; /* Adjust the size for the paragraph text */
+    line-height: 1.6; /* Optional: Improves readability */
+}
 
 #variations{
 grid-area: v;
     background-color:  #f7f130;
+}
+
+#variations h1 {
+    font-size: 2.5rem; /* Adjust the size for the heading */
+}
+
+#variations h4 {
+    font-size: 1.5rem; /* Adjust the size for the subheadings */
+}
+
+#variations p {
+    font-size: 1.2rem; /* Adjust the size for the paragraph text */
+    line-height: 1.6; /* Optional: Improves readability */
 }
 
 #alphabet {
@@ -85,7 +108,7 @@ footer{
 /* variable font animation */
 h3{
     font-weight:20; 
-    text-align: center;
+    text-align: left;
     padding-top: 200px;
     font-size: 5em;
     animation: weightChange 1s infinite;
