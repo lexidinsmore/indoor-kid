@@ -88,7 +88,7 @@ h3{
     text-align: center;
     padding-top: 200px;
     font-size: 5em;
-    animation: weightChange 7s infinite;
+    animation: weightChange 1s infinite;
 }
 
 .opensans{
@@ -106,7 +106,7 @@ h3{
      /* animations for the variable section */
 
      .weight{
-        animation: variationWeightchange 5s infinite;
+        animation: variationWeightchange 3s infinite;
     }
     @keyframes variationWeightchange {
         0%, 100%{
@@ -117,7 +117,7 @@ h3{
          }
 
     .slant{
-       animation: slantChange 5s infinite;
+       animation: slantChange 1s infinite;
     }
     @keyframes slantChange {
         0%, 100%{
@@ -128,7 +128,7 @@ h3{
          }
 
     .emphasis{
-        animation: emphasisChange 5s infinite;
+        animation: emphasisChange 2s infinite;
     }
     @keyframes emphasisChange {
         0%, 100%{
