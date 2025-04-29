@@ -91,6 +91,7 @@ footer{
 
 #download {
     grid-area: d;
+    text-align: center; /* Centers inline content like links or buttons */
     background-color: #064f42;
     color: #f4ef6f; /* Makes all text inside #alphabet yellow */
 
@@ -207,6 +208,6 @@ h4{
 }
 
 p{
-    text-align: center;
-}
+    padding-left: 20px; /* Adds padding to the left */
+    padding-right: 20px; /* Adds padding to the right */}
 
